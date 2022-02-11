@@ -1,10 +1,10 @@
 package edu.kis.vh.nursery;
 
 public class DefaultCountingOutRhymer {
-    private final IntArrayStack dataContainer;
+    private final IntArrayStack data;
 
     public DefaultCountingOutRhymer(IntArrayStack dataContainer) {
-        this.dataContainer = dataContainer;
+        this.data = dataContainer;
     }
 
     public DefaultCountingOutRhymer() {
@@ -12,23 +12,23 @@ public class DefaultCountingOutRhymer {
     }
 
     public void countIn(int in) {
-        dataContainer.countIn(in);
+        data.countIn(in);
     }
 
     public boolean callCheck() {
-        return dataContainer.callCheck();
+        return data.callCheck();
     }
 
     public boolean isFull() {
-        return dataContainer.isFull();
+        return data.isFull();
     }
 
     protected int peekaboo() {
-        return dataContainer.peekaboo();
+        return data.peekaboo();
     }
 
     public int countOut() {
-        return dataContainer.countOut();
+        return data.countOut();
     }
 
 }
