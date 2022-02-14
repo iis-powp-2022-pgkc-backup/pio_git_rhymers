@@ -1,6 +1,6 @@
 package edu.kis.vh.nursery.list;
 
-public class IntLinkedList {
+public class IntLinkedList implements IntArrayStackInterface{
 
 	Node last;
 	int i;
@@ -19,19 +19,20 @@ public class IntLinkedList {
 		return last == null;
 	}
 
+	@Override
 	public boolean isFull() {
 		return false;
 	}
 
 	public int top() {
 		if (isEmpty())
-			return -1;
+			return IntArrayStack.EMPTY;
 		return last.value;
 	}
 
 	public int pop() {
 		if (isEmpty())
-			return -1;
+			return IntArrayStack.EMPTY;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
