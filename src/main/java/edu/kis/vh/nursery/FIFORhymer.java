@@ -17,5 +17,7 @@ public class FIFORhymer extends defaultCountingOutRhymer {
 		countIn(temp.countOut());
 		
 		return ret;
+
 	}
+
 }
