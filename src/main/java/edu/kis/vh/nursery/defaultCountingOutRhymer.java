@@ -7,9 +7,9 @@ public class defaultCountingOutRhymer {
 	private final int[] numbersArray = new int[maxIndex + 1];
 	public int numberOfElements = -1;
 
-	public void countIn(int in) {
+	public void countIn(int value) {
 		if (!isFull()) {
-			numbersArray[++numberOfElements] = in;
+			numbersArray[++numberOfElements] = value;
 		}
 	}
 
@@ -23,14 +23,14 @@ public class defaultCountingOutRhymer {
 
 	protected int peekaboo() {
 		if (callCheck()) {
-			return -1;
+			return isEmpty;
 		}
 		return numbersArray[numberOfElements];
 	}
 			
 	public int countOut() {
 		if (callCheck()) {
-			return -1;
+			return isEmpty;
 		}
 		return numbersArray[numberOfElements--];
 	}
